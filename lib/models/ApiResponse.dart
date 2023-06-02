@@ -1,6 +1,8 @@
+import 'dart:core';
+
 class ApiResponse<T> {
-  bool success;
-  int total;
+  bool? success;
+  int? total;
   List<T> resources;
   String? message;
   String? version;
@@ -23,5 +25,15 @@ class ApiResponse<T> {
       message: json['message'],
       version: json['version'],
     );
+  }
+
+  @override
+  String toString() {
+    return 'ApiResponse<${T.toString()}>('
+        'success: $success, '
+        'total: $total, '
+        'resources: $resources, '
+        'message: $message, '
+        'version: $version)';
   }
 }

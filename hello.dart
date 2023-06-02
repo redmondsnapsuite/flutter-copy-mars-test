@@ -1,5 +1,5 @@
-import 'models/ListItem.dart';
-import 'services/PurchaseOrderService.dart';
+import 'lib/models/ListItem.dart';
+import 'lib/services/PurchaseOrderService.dart';
 
 void main() async  {
   print('Hello, Dart!');
