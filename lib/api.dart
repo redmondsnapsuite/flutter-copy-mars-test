@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:my_project/models/ApiResponseItem.dart';
+import 'package:my_project/models/WorkOrderItem.dart';
 import '../../models/ListItem.dart';
 import './models/ApiResponse.dart';
 
@@ -37,16 +39,35 @@ class Api {
           (resourceJson) => ListItem.fromJson(resourceJson) as T,
         );
 
-
         // print(convertedRes.toString());
         // print('after to stirng');
-        return convertedRes.resources[0] as T;
+        return convertedRes.resources[0];
       }
     } catch (e) {
       print(e);
       throw Exception('Api File, error $e');
     }
 
+    return T as Future<T>;
+  }
+
+  Future<T> fetchDetails<T>({String path = "/projects/mobile"}) async {
+    try {
+      final fullUrl =
+          '$baseUrl$path' + "?id=51116&t=05a6f552-6325-4937-a0f3-522075ae3e28";
+
+      final response = await http.get(Uri.parse(fullUrl), headers: headers);
+
+      print(response.statusCode == 200);
+
+      if (response.statusCode == 200) {
+        final parsedJson = jsonDecode(response.body);
+        return parsedJson['resources'] as T;
+      }
+    } catch (e) {
+      print(e);
+      throw Exception('Api File, error $e');
+    }
     return T as Future<T>;
   }
 }
