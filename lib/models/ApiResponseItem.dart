@@ -3,7 +3,7 @@ import 'dart:core';
 class ApiResponseItem<T> {
   bool? success;
   int? total;
-  T? resources;
+  dynamic resources;
   String? message;
   String? version;
 

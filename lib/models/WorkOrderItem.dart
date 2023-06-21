@@ -1,22 +1,22 @@
 class WorkOrderItem {
-  String projectRefNumber;
-  int intProjectID;
-  String jobDescription;
-  String description;
-  String created;
-  String clientName;
-  String address;
-  String city;
-  String province;
-  String postalCode;
-  String latitude;
-  String longitude;
-  String status;
-  int projectID;
-  String dueDate;
-  String customField2;
-  String customField3;
-  String projectStartDate;
+  String? projectRefNumber;
+  int? intProjectID;
+  String? jobDescription;
+  String? description;
+  String? created;
+  String? clientName;
+  String? address;
+  String? city;
+  String? province;
+  String? postalCode;
+  String? latitude;
+  String? longitude;
+  String? status;
+  int? projectID;
+  String? dueDate;
+  String? customField2;
+  String? customField3;
+  String? projectStartDate;
 
   WorkOrderItem({
     required this.projectRefNumber,
@@ -39,7 +39,7 @@ class WorkOrderItem {
     required this.projectStartDate,
   });
 
-  factory WorkOrderItem.fromJson(Map<String, dynamic> json) {
+  factory WorkOrderItem.fromJson(Map<String?, dynamic> json) {
     return WorkOrderItem(
       projectRefNumber: json['projectRefNumber'],
       intProjectID: json['intProjectID'],
