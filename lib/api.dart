@@ -184,8 +184,8 @@ class Api {
       print(response.statusCode == 200);
 
       if (response.statusCode == 200) {
-        final parsedJson = jsonDecode(response.body);
-        return parsedJson['resources'];
+      final parsedJson = jsonDecode(await response.stream.bytesToString());
+      return parsedJson['resources'];
       }
     } catch (e) {
       print(e);
