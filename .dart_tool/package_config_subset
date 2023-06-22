@@ -18,10 +18,6 @@ collection
 2.12
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/collection-1.17.0/
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/collection-1.17.0/lib/
-cupertino_icons
-2.12
-file:///Users/mondeee/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5/
-file:///Users/mondeee/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5/lib/
 fake_async
 2.12
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/fake_async-1.3.1/
@@ -94,8 +90,8 @@ flutter_test
 2.17
 file:///Users/mondeee/Documents/Dev/flutter/packages/flutter_test/
 file:///Users/mondeee/Documents/Dev/flutter/packages/flutter_test/lib/
-marsdartest
+mars_test
 2.19
-file:///Users/mondeee/Documents/Flutter%20Projects/mars.dart.test/
-file:///Users/mondeee/Documents/Flutter%20Projects/mars.dart.test/lib/
+file:///Users/mondeee/Documents/Flutter%20Projects/mars_test/
+file:///Users/mondeee/Documents/Flutter%20Projects/mars_test/lib/
 2

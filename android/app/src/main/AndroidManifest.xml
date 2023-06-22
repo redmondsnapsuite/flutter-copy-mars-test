@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.marsdartest">
+    package="com.example.mars_test">
    <application
-        android:label="marsdartest"
+        android:label="mars_test"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

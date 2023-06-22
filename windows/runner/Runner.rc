@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "marsdartest" "\0"
+            VALUE "FileDescription", "mars_test" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "marsdartest" "\0"
+            VALUE "InternalName", "mars_test" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "marsdartest.exe" "\0"
-            VALUE "ProductName", "marsdartest" "\0"
+            VALUE "OriginalFilename", "mars_test.exe" "\0"
+            VALUE "ProductName", "mars_test" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
