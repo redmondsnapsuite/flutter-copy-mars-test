@@ -1,0 +1,72 @@
+name: Production Release APK to AppStore
+
+on:
+  # push:
+  #   branches: [ release ]
+  #   paths-ignore: 
+  #     - '**/README.md'
+  #     - '**/*.yml'
+  # pull_request:
+  #   branches: [release]
+
+  #Trigger manual build
+  workflow_dispatch: 
+      
+jobs:
+  build:
+    name: Build and Release Firebase
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - uses: expo/expo-github-action@v6
+        with:
+          expo-version: 4.x
+          token: ${{ secrets.EXPO_TOKEN }}
+          
+      - run: npm ci
+        # working-directory: v1
+
+      - run: npm install -g eas-cli@3.8.1
+        # working-directory: v1
+
+      - name: save current date
+        run: |
+          # do some operation that changes a file in the git repo
+          date > time_log.txt
+      
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          
+      #     # VERSION BUMP
+      - run: npx standard-version --release-as minor 
+        # working-directory: v1
+
+      - name: push
+        run: |
+          git add .
+          git commit -m "VERSION BUMP ACTION"
+          git push origin release
+        # run: |
+        #   # Stage the file, commit and push
+        #   git add time_log.txt
+        #   git commit -m "log build time"
+        #   git push origin release
+          
+      - run: eas build --platform android --profile production --non-interactive
+      #   # working-directory: v1
+
+      - run: eas build --platform ios --profile production --non-interactive
+      #   # working-directory: v1
+
+      - run: eas submit -p android --latest
+        # working-directory: v1
+
+      - run: EXPO_APPLE_APP_SPECIFIC_PASSWORD=${{ secrets.EXPO_APPLE_APP_SPECIFIC_PASSWORD }} eas submit -p ios --latest
+        # working-directory: v1
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>142151271468-hd4hhdort1r0v3go816gtlf6d5t1sgoc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.142151271468-hd4hhdort1r0v3go816gtlf6d5t1sgoc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBwP8bPmKyyoL-cp8YIcVS6_4eaInsl-dc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>142151271468</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.marsTest</string>
+	<key>PROJECT_ID</key>
+	<string>mars-flutter-test</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mars-flutter-test.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:142151271468:ios:929d861068000ed8133d89</string>
+</dict>
+</plist>
