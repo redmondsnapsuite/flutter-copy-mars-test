@@ -1,9 +1,10 @@
 name: Firebase Build
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
+workflow_dispatch: 
 
 jobs:
   build:
@@ -32,4 +33,3 @@ jobs:
         run: firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk --app ${{ secrets.FIREBASE_APP_ID }}
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
