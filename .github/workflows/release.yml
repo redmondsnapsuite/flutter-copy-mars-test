@@ -25,9 +25,12 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      - name: Deploy to Firebase
-        uses: firebase/github-action@v1
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Authenticate Firebase
+        run: firebase login:ci --no-localhost
+
+      - name: Deploy to Firebase Hosting
+        run: firebase deploy --only hosting --token "${{ secrets.FIREBASE_TOKEN }}"
+
