@@ -23,8 +23,19 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Install CocoaPods
+        run: sudo gem install cocoapods
+
+      - name: Install Pods
+        run: |
+          cd ios
+          pod install
+
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
+
+    # - name: Build iOS app
+      #   run: flutter build ios --release
 
       - name: Build IPA
         run: flutter build ipa --release
