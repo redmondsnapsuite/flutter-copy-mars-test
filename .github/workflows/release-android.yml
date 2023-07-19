@@ -1,4 +1,4 @@
-name: Firebase Build
+name: Firebase Build Android
 
 on:
   # push:
