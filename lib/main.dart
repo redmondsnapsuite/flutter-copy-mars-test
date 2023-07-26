@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mars_test/screens/profile_screen.dart';
+import 'package:mars_test/screens/responsive-layout/responsive-home.dart';
 import 'package:mars_test/screens/user_screen.dart';
 import 'package:mars_test/services/bloc/user_bloc.dart';
 
@@ -24,9 +25,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => UserBloc(),
-      child: MaterialApp(
+      child: const MaterialApp(
         title: 'My App',
-        home: UserScreen(),
+        home: HomePage(),
       ),
     );
   }
