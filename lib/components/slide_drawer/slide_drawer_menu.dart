@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:test_app/screens/open_jobs.dart';
+import '../../screens/open_jobs.dart';
 // import 'package:test_app/screens/WebViewApp.dart';
 
 
@@ -15,8 +15,8 @@ class slide_drawer_menu extends StatelessWidget {
               leading: Icon(Icons.person),
             title: Text('Open Jobs'),
             onTap: () => {
-              // Navigator.push(context,
-              //     MaterialPageRoute(builder: (context) => const open_jobs()))
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const open_jobs()))
             },
           ),
       );
