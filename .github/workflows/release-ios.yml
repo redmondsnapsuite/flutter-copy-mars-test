@@ -18,6 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+<<<<<<< HEAD
       # - name: Install certificates and provisioning profile
       #   # env:
       #   #   P12_DISTRIBUTION_CERTIFICATE_BASE64: "${{ secrets.CERTIFICATE_P12 }}"
@@ -32,6 +33,19 @@ jobs:
       #     security create-keychain -p actions build.keychain
       #     security default-keychain -s build.keychain
       #     security import certificate.p12 -k build.keychain -P "" -T /usr/bin/codesign
+=======
+      - name: Install the Apple certificate and provisioning profile
+        env:
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.CERTIFICATE_P12 }}
+          P12_PASSWORD: ""
+          BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.PROVISIONING_PROFILE_MARS_TEST }}
+          KEYCHAIN_PASSWORD: ""
+        run: |
+          # create variables
+          CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
+          PP_PATH=$RUNNER_TEMP/build_pp.mobileprovision
+          KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
+>>>>>>> b37c207 (change base64 provisioning)
 
       #     # Unlock the keychain
       #     security unlock-keychain -p actions build.keychain
