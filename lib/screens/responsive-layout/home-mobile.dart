@@ -15,7 +15,7 @@ class MyMobileBody extends StatelessWidget {
           children: [
             Expanded(
               child: ListView(
-                children: const [
+                children: [
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
                     child: Column(
@@ -27,7 +27,8 @@ class MyMobileBody extends StatelessWidget {
                               backGroundColor: Colors.blue,
                               buttonTitle: 'New Job',
                               buttonIcon: Icons.construction,
-                              buttonDescription: 'Tap here to \ncreate a new job',
+                              buttonDescription:
+                                  'Tap here to \ncreate a new job',
                             ),
                             home_button(
                               backGroundColor: Colors.purple,
