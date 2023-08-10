@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-// import '../card_title_description/card_title_description.dart';
+import '../card_title_description/card_title_description.dart';
 
 class tabs extends StatelessWidget {
+  const tabs({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: TabBar(
           indicatorColor: Colors.purple,
@@ -17,9 +19,9 @@ class tabs extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            Icon(Icons.flight, size: 350),
-            Icon(Icons.directions_transit, size: 350),
-            Icon(Icons.directions_car, size: 350),
+            card_title_description(),
+            card_title_description(),
+            card_title_description(),
           ],
         ),
       ),
