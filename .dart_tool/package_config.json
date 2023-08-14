@@ -308,11 +308,7 @@
       "languageVersion": "2.19"
     }
   ],
-<<<<<<< HEAD
   "generated": "2023-08-18T15:18:49.557519Z",
-=======
-  "generated": "2023-08-16T16:05:42.610302Z",
->>>>>>> 63ff915 (change the keychain flow)
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
