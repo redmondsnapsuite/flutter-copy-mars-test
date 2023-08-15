@@ -80,6 +80,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_signature_pad",
+      "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/flutter_signature_pad-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/mondeee/Documents/Dev/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -218,7 +224,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-08-09T15:42:06.898439Z",
+  "generated": "2023-08-15T16:00:41.895621Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

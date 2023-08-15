@@ -9,7 +9,7 @@ class open_jobs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: NavBarWidget.navBar('Next screen'),
+        appBar: NavBarWidget.navBar('Next screen', onPress: () => Navigator.pop(context, true)),
         body: Container(
             width: double.infinity,
             height: double.infinity,
