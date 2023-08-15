@@ -55,12 +55,18 @@ flutter_lints
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/lib/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9216acc (Draw on image, but has bug when painting)
 flutter_plugin_android_lifecycle
 2.18
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.15/
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.15/lib/
+<<<<<<< HEAD
 =======
 >>>>>>> 46d6cfd (added signature pad)
+=======
+>>>>>>> 9216acc (Draw on image, but has bug when painting)
 flutter_signature_pad
 2.12
 file:///Users/mondeee/.pub-cache/hosted/pub.dev/flutter_signature_pad-3.0.1/
