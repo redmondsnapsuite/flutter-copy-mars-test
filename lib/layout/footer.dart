@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mars_test/components/draw-on-image/draw-on-image.dart';
+import 'package:mars_test/components/draw-on-image/paint-on-image.dart';
 import 'package:mars_test/components/signature-pad/signature_pad.dart';
 
 class FooterWidget extends StatelessWidget {
@@ -34,9 +36,11 @@ class FooterWidget extends StatelessWidget {
                       _buildIconButton(
                         onPressed: () {
                           // print('onpress');
-                          Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => SignaturePad()));
-                        },  
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignaturePad()));
+                        },
                         icon: Icons.edit,
                         iconSize: 25,
                         iconColor: Colors.purple,
@@ -60,7 +64,12 @@ class FooterWidget extends StatelessWidget {
                         icon: Icons.camera_alt,
                         iconSize: 25,
                         iconColor: Colors.purple,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ImageEditorWidget()));
+                        },
                       ),
                       const Text(
                         'Capture',
