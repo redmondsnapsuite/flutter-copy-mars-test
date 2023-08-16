@@ -14,10 +14,10 @@ class open_jobs extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
             decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("images/app-background.jpg"),
-                fit: BoxFit.cover,
-              ),
+              // image: DecorationImage(
+              //   image: AssetImage(""),
+              //   fit: BoxFit.cover,
+              // ),
             ),
             child: const tabs()),
         bottomNavigationBar: const FooterWidget() 

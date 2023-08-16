@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 // import '../../components/home_button/combined_home_button.dart';
+import '../../components/button/button.dart';
 import '../../components/home_button/home-button-mobile.dart';
+import '../../components/input_field/input_field.dart';
+import '../../components/scrollable_list/scrollable_list_card_title_description.dart';
 
 class MyMobileBody extends StatelessWidget {
   const MyMobileBody({Key? key}) : super(key: key);
@@ -15,7 +18,7 @@ class MyMobileBody extends StatelessWidget {
           children: [
             Expanded(
               child: ListView(
-                children: [
+                children: const [
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
                     child: Column(
@@ -75,6 +78,34 @@ class MyMobileBody extends StatelessWidget {
                       ],
                     ),
                   ),
+                  
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
+                    child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          button(buttonText: 'Submit', buttonColor: Colors.purple)
+                        ])
+                    ),
+                    Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
+                    child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                           input_field(inputHint: 'test hint'),
+                        ])
+                    ),
+                     Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
+                      child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            scrollable_list_card_title_description(),
+                          ])),
+                
                 ],
               ),
             ),
