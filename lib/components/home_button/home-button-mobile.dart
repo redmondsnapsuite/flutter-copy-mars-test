@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class home_button_icon extends StatelessWidget {
   final IconData buttonIcon;
 
-  const home_button_icon({Key? key, required this.buttonIcon}) : super(key: key);
+  const home_button_icon({Key? key, required this.buttonIcon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,8 @@ class home_button_icon extends StatelessWidget {
 class home_button_title extends StatelessWidget {
   final String buttonTitle;
 
-  const home_button_title({Key? key, required this.buttonTitle}) : super(key: key);
+  const home_button_title({Key? key, required this.buttonTitle})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,8 @@ class home_button_title extends StatelessWidget {
 class home_button_description extends StatelessWidget {
   final String buttonDescription;
 
-  const home_button_description({Key? key, required this.buttonDescription}) : super(key: key);
+  const home_button_description({Key? key, required this.buttonDescription})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +82,7 @@ class home_button extends StatelessWidget {
     return InkWell(
       onTap: () {
         // Navigator.push(context, MaterialPageRoute(builder: (context) => open_jobs()))
+        // Navigator.of(context).pop();
       },
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),

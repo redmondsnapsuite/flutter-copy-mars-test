@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mars_test/components/draw-on-image/draw-on-image.dart';
+import 'package:mars_test/components/draw-on-image/paint-on-image.dart';
+import 'package:mars_test/components/signature-pad/signature_pad.dart';
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({Key? key});
@@ -27,14 +30,20 @@ class FooterWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal:50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: Column(
                     children: [
                       _buildIconButton(
+                        onPressed: () {
+                          // print('onpress');
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignaturePad()));
+                        },
                         icon: Icons.edit,
                         iconSize: 25,
                         iconColor: Colors.purple,
-                        onPressed: () {},
                       ),
                       const Text(
                         'Signature',
@@ -48,14 +57,19 @@ class FooterWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal:50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: Column(
                     children: [
                       _buildIconButton(
                         icon: Icons.camera_alt,
                         iconSize: 25,
                         iconColor: Colors.purple,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ImageEditorWidget()));
+                        },
                       ),
                       const Text(
                         'Capture',
@@ -84,14 +98,14 @@ class FooterWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                  'Notes',
+                    'Notes',
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 109, 109, 109),
                     ),
                   ),
-          ],
+                ],
               ),
             ),
           ],
@@ -129,7 +143,7 @@ class FooterWidget extends StatelessWidget {
             ),
       child: IconButton(
         icon: SizedBox(
-          height: 20, 
+          height: 20,
           child: Icon(
             icon,
             size: iconSize,
@@ -141,4 +155,3 @@ class FooterWidget extends StatelessWidget {
     );
   }
 }
-
