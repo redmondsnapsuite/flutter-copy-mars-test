@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mars_test/components/card_mage/card_with_image.dart';
 import '../../components/button/button.dart';
 import '../../components/home_button/home-button-mobile.dart';
 import '../../components/input_field/input_field.dart';
@@ -102,6 +103,29 @@ class MyMobileBody extends StatelessWidget {
                       ],
                     ),
                   ),
+                
+                  Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: CardWithImage(
+                              backgroundImage: 'assets/images/construction-image.jpg',
+                              date: 'August 17, 2023',
+                              title: 'Title goes here',
+                              description: 'Description will go here.',
+                              buttonText: 'Click Me',
+                              onPressed: () {
+                                // Add your button click logic here
+                              },
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  
                 ],
               ),
             ),
