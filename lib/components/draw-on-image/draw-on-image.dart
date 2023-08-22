@@ -13,6 +13,8 @@ class ImageEditorWidget extends StatefulWidget {
 
 class _ImageEditorWidgetState extends State<ImageEditorWidget> {
   File? _imageFile;
+  double? _imageWidth; // Add this line
+  double? _imageHeight; // Add this line
   List<List<Offset>> _lines = [];
   Color _drawColor = Colors.red; // Set the color to red
 
@@ -25,6 +27,13 @@ class _ImageEditorWidgetState extends State<ImageEditorWidget> {
       setState(() {
         _imageFile = File(result.files.single.path!);
       });
+
+      // After setting the image, decode it to get its size
+      var image = await loadImage();
+      if (image != null) {
+        _imageWidth = image.width.toDouble();
+        _imageHeight = image.height.toDouble();
+      }
     }
   }
 
@@ -58,7 +67,8 @@ class _ImageEditorWidgetState extends State<ImageEditorWidget> {
 
       final picture = recorder.endRecording();
       final pngBytes = await picture.toImage(image.width, image.height);
-      final byteData = await pngBytes.toByteData(format: ui.ImageByteFormat.png);
+      final byteData =
+          await pngBytes.toByteData(format: ui.ImageByteFormat.png);
 
       if (byteData != null) {
         Uint8List pngData = byteData.buffer.asUint8List();
@@ -107,16 +117,13 @@ class _ImageEditorWidgetState extends State<ImageEditorWidget> {
       body: Column(
         children: [
           Expanded(
-            child: FittedBox(
-              fit: BoxFit.contain,
+            child: Container(
               child: GestureDetector(
                 onPanStart: _onPanStart,
                 onPanUpdate: _onPanUpdate,
                 child: Container(
-                  constraints: BoxConstraints(
-                    minWidth: 100,
-                    minHeight: 100,
-                  ),
+                  width: _imageWidth,
+                  height: _imageHeight,
                   child: Stack(
                     children: [
                       _imageFile != null
@@ -126,6 +133,7 @@ class _ImageEditorWidgetState extends State<ImageEditorWidget> {
                               style: TextStyle(fontSize: 18.0),
                             ),
                       CustomPaint(
+                        size: Size(_imageWidth ?? 0.0, _imageHeight ?? 0.0),
                         painter: _DrawingPainter(
                           lines: _lines,
                           drawColor: _drawColor,
