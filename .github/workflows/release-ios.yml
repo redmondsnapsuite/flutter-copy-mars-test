@@ -16,9 +16,12 @@ jobs:
         run: /usr/bin/xcodebuild -version
 
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install certificates and provisioning profile
+        env:
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.CERTIFICATE_P12 }}
+          BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.PROVISIONING_PROFILE }}
         run: |
           CERTIFICATE_PATH=$RUNNER_TEMP/certificate.p12
           PP_PATH=$RUNNER_TEMP/profile.mobileprovision
