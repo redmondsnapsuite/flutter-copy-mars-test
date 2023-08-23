@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mars_test/components/card_mage/card_with_image.dart';
 import '../../components/button/button.dart';
+import '../../components/calendar/calendar.dart';
 import '../../components/home_button/home-button-mobile.dart';
 import '../../components/input_field/input_field.dart';
 import '../../components/scrollable_list/scrollable_list_card_title_description.dart';
@@ -125,6 +126,18 @@ class MyMobileBody extends StatelessWidget {
                         ],
                       ),
                     ),
+
+                     Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                      child: ElevatedButton(
+                        child: Text('Open Calendar Page'),
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => TableEventsExample()),
+                        ),
+                      )
+                      ),
+
                   
                 ],
               ),
