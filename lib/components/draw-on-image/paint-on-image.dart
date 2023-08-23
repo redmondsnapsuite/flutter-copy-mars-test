@@ -208,7 +208,7 @@ class _ImagePainterExampleState extends State<ImagePainterExample> {
     // print(widget.imageFile);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Image Painter Example"),
+        title: const Text("Edit Image"),
         actions: [
           IconButton(
             icon: const Icon(Icons.save_alt),
