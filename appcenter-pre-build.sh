@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Place for user-defined environment variables
 FLUTTER_CHANNEL=stable
