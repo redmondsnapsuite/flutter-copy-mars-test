@@ -113,14 +113,6 @@ android {
                             into bundleDir
                             include bundlePath.name
                         }
-                        copy {
-                            from bundlePath.parent
-                            into bundleDir
-                            include bundlePath.name
-                            rename { String fileName ->
-                                fileName.replace(".aab", ".aab.unsigned")
-                            }
-                        }
                         println "AAB file moved to: ${bundleDir}/${bundlePath.name}"
                     }
 
