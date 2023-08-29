@@ -105,8 +105,8 @@ android {
                     // def bundlePath = file('../../build/app/outputs/bundle/stagingRelease/app-staging-release.aab')
                     def bundlePath = file('../../build/app/outputs/bundle/release/app-release.aab')
                     if(bundlePath.exists()) {
-                        println "AAB file moved to: ${bundleDir}/${bundlePath.name}"
                         def bundleDir = file('build/outputs/bundle/')
+                        println "AAB file moved to: ${bundleDir}/${bundlePath.name}"
                         bundleDir.mkdirs()
                         copy {
                             from bundlePath.parent
