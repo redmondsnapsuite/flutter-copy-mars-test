@@ -103,17 +103,17 @@ android {
 
                     // if any flavor then path will change accordingly, for staging it will be -
                     // def bundlePath = file('../../build/app/outputs/bundle/stagingRelease/app-staging-release.aab')
-                    // def bundlePath = file('../../build/app/outputs/bundle/release/app-release.aab')
-                    // if(bundlePath.exists()) {
-                    //     def bundleDir = file('build/outputs/bundle/')
-                    //     bundleDir.mkdirs()
-                    //     copy {
-                    //         from bundlePath.parent
-                    //         into bundlePath
-                    //         include bundlePath.name
-                    //     }
-                    //     println "AAB file moved to: ${bundleDir}/${bundlePath.name}"
-                    // }
+                    def bundlePath = file('../../build/app/outputs/bundle/release/app-release.aab')
+                    if(bundlePath.exists()) {
+                        def bundleDir = file('build/outputs/bundle/')
+                        bundleDir.mkdirs()
+                        copy {
+                            from bundlePath.parent
+                            into bundlePath
+                            include bundlePath.name
+                        }
+                        println "AAB file moved to: ${bundleDir}/${bundlePath.name}"
+                    }
 
                     // if any flavor then path will change accordingly, for staging it will be -
                     //def mappingPath = file('../../build/app/outputs/mapping/stagingRelease/mapping.txt')
