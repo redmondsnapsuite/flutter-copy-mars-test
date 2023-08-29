@@ -14,4 +14,4 @@ flutter --version
 # Install dependencies
 flutter pub get
 
-flutter build appbundle
+# flutter build appbundle
