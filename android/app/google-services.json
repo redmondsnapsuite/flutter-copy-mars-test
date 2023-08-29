@@ -40,6 +40,42 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142151271468:android:b2466c54769efd61133d89",
+        "android_client_info": {
+          "package_name": "com.snapsuite.marsflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142151271468-5g3j9ga2fggj119t51q8ijn3r44sjfnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx0JXq2ZofEvPMydi03BGvCTtoOdSAJv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142151271468-5g3j9ga2fggj119t51q8ijn3r44sjfnd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "142151271468-hd4hhdort1r0v3go816gtlf6d5t1sgoc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.marsTest"
+              }
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
