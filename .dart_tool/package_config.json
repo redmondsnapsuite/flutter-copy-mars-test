@@ -45,19 +45,31 @@
     },
     {
       "name": "ffi",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.0.2",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.0",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "file_picker",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-5.3.1",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-5.3.3",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "firebase_core",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.14.0",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.15.1",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -69,7 +81,11 @@
     },
     {
       "name": "firebase_core_web",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.6.0",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.7.0",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -87,7 +103,11 @@
     },
     {
       "name": "flutter_lints",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.1",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.2",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -147,7 +167,11 @@
     },
     {
       "name": "lints",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.0.1",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -225,13 +249,21 @@
     },
     {
       "name": "platform",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.0",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.1",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "plugin_platform_interface",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.5",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -309,7 +341,11 @@
     },
     {
       "name": "win32",
+<<<<<<< HEAD
       "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/win32-4.1.4",
+=======
+      "rootUri": "file:///C:/Users/Acer/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.0.6",
+>>>>>>> 974aa15 (package lock)
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -326,7 +362,11 @@
       "languageVersion": "2.19"
     }
   ],
+<<<<<<< HEAD
   "generated": "2023-08-22T09:39:37.148533Z",
+=======
+  "generated": "2023-08-23T13:03:44.126079Z",
+>>>>>>> 974aa15 (package lock)
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }
