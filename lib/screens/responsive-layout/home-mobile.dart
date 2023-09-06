@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mars_test/components/card_mage/card_with_image.dart';
+import 'package:mars_test/components/webView/webView.dart';
 import '../../components/button/button.dart';
 import '../../components/calendar/calendar.dart';
 import '../../components/gallery/gallery.dart';
 import '../../components/home_button/home-button-mobile.dart';
 import '../../components/input_field/input_field.dart';
+import '../../components/pdfViewer/pdf_viewer.dart';
 import '../../components/scrollable_list/scrollable_list_card_title_description.dart';
 import '../../components/select_with_search/select_with_search.dart';
+import '../../components/uploader/uploader.dart';
 
 class MyMobileBody extends StatelessWidget {
   const MyMobileBody({Key? key}) : super(key: key);
@@ -139,12 +142,43 @@ class MyMobileBody extends StatelessWidget {
                     )
                   ),
                 
-                Padding(
+                  Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                   child: gallery()
                 
                 ),
                   
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                      child: ElevatedButton(
+                      child: Text('Open PDF'),
+                      onPressed: () {
+                        String pdfUrl = 'https://snapsuiteappus.blob.core.windows.net/ss-p/aircool/b604d9ec-2ccf-4dd2-92c5-9824fac11428/913/3080/projects/WO4177-Tripwire-30D60A4A-workorder.pdf?v=1687430428541';
+                        // Replace the URL with the actual PDF file URL
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PDFViewer(pdfUrl: pdfUrl),
+                          ),
+                        );
+                      },
+                    )
+                  ),
+                   
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                    child: ElevatedButton(
+                      child: Text('Open Web View'),
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const WebViewApp()),
+                      ),
+                    )
+                  ),
+                
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                    child: FilePickerComponent())
                 ],
               ),
             ),
