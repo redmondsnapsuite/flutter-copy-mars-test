@@ -52,8 +52,8 @@ android {
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
-        versionCode 2
-        versionName "0.1.7"
+        versionCode 3
+        versionName flutter.flutterVersionName
     }
 //ONLY ENABLE THIS TO BUILD LOCALLY DISABLE WHEN BUILDING TO APPSTORE
     signingConfigs {
