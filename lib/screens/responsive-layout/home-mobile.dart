@@ -3,6 +3,7 @@ import 'package:mars_test/components/card_mage/card_with_image.dart';
 import 'package:mars_test/components/webView/webView.dart';
 import '../../components/button/button.dart';
 import '../../components/calendar/calendar.dart';
+import '../../components/credit_card_scanner/credit_card_scanner.dart';
 import '../../components/gallery/gallery.dart';
 import '../../components/home_button/home-button-mobile.dart';
 import '../../components/input_field/input_field.dart';
@@ -178,7 +179,11 @@ class MyMobileBody extends StatelessWidget {
                 
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                    child: FilePickerComponent())
+                    child: FilePickerComponent()),
+
+                Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                child: CreditCardScanner())
                 ],
               ),
             ),

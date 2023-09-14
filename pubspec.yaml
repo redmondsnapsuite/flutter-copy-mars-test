@@ -21,6 +21,9 @@ dependencies:
   path_provider: ^2.1.0
   table_calendar: ^3.0.9
   webview_flutter: ^4.2.4
+  camera: ^0.9.4+5
+  image_picker: ^0.8.4+2
+  firebase_ml_vision: ^0.10.0
 
 dev_dependencies:
   flutter_test:
