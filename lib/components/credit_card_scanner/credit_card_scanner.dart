@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:firebase_ml_vision/firebase_ml_vision.dart';
+import 'package:google_ml_kit/google_ml_kit.dart';
 
 class CreditCardScanner extends StatefulWidget {
   @override
@@ -40,13 +40,13 @@ class _CreditCardScannerState extends State<CreditCardScanner> {
       final image = await ImagePicker().getImage(source: ImageSource.camera);
 
       if (image != null) {
-        final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFile(File(image.path));
-        final TextRecognizer textRecognizer = FirebaseVision.instance.textRecognizer();
-
-        final VisionText visionText = await textRecognizer.processImage(visionImage);
+        final inputImage = InputImage.fromFilePath(image.path);
+        final textDetector = GoogleMlKit.vision.textRecognizer();
+        final RecognizedText recognisedText = await textDetector.processImage(inputImage);
+        
         String scannedText = '';
 
-        for (TextBlock block in visionText.blocks) {
+        for (TextBlock block in recognisedText.blocks) {
           scannedText += block.text + '\n';
         }
 
@@ -57,7 +57,7 @@ class _CreditCardScannerState extends State<CreditCardScanner> {
           _scannedCardData = scannedText;
         });
 
-        textRecognizer.close();
+        textDetector.close();
       }
     } catch (e) {
       print('Error scanning credit card: $e');
