@@ -596,20 +596,12 @@
       "languageVersion": "2.14"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3769335 (package config save)
       "name": "web",
       "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/web-0.1.4-beta",
       "packageUri": "lib/",
       "languageVersion": "3.1"
-<<<<<<< HEAD
-=======
-=======
     },
     {
->>>>>>> 3769335 (package config save)
       "name": "webview_flutter",
       "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/webview_flutter-4.2.4",
       "packageUri": "lib/",
@@ -617,13 +609,13 @@
     },
     {
       "name": "webview_flutter_android",
-      "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/webview_flutter_android-3.9.5",
+      "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/webview_flutter_android-3.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "webview_flutter_platform_interface",
-      "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/webview_flutter_platform_interface-2.5.1",
+      "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/webview_flutter_platform_interface-2.6.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -632,7 +624,6 @@
       "rootUri": "file:///Users/mondeee/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-3.7.4",
       "packageUri": "lib/",
       "languageVersion": "2.19"
->>>>>>> 3601e1d (pdfviewer, uploader, webview)
     },
     {
       "name": "win32",
@@ -653,23 +644,7 @@
       "languageVersion": "2.19"
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "generated": "2023-09-15T12:24:53.684172Z",
-=======
-  "generated": "2023-09-06T10:07:46.248685Z",
->>>>>>> 3601e1d (pdfviewer, uploader, webview)
-=======
-  "generated": "2023-09-14T12:37:06.156459Z",
->>>>>>> e87dd0e (card scanner)
-=======
-  "generated": "2023-09-14T17:53:41.479714Z",
->>>>>>> 3769335 (package config save)
-=======
-  "generated": "2023-09-14T18:10:07.776252Z",
->>>>>>> 8f84126 (updated fb ml vision to google ml vision)
+  "generated": "2023-09-15T16:57:41.391780Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }
