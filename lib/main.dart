@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mars_test/components/credit_card_scanner/credit_card_scanner.dart';
 import 'package:mars_test/screens/responsive-layout/home-mobile.dart';
 import 'package:mars_test/screens/responsive-layout/home-tablet.dart';
 // import 'package:test_app/components/signature-pad/signature_pad.dart';
@@ -30,10 +31,13 @@ class MyApp extends StatelessWidget {
                 drawerChild: ListView(
                   // Important: Remove any padding from the ListView.
                   padding: EdgeInsets.zero,
-                  children: const [
+                  children: [
                     slide_drawer_header(),
                     slide_drawer_menu(),
-                    slide_drawer_menu(),
+                    slide_drawer_menu(
+                      title: 'Credit Card Scanner',
+                      onTap: () => print("onPress"),
+                    ),
                     CollapsibleListTile(),
                   ],
                 ),
@@ -54,10 +58,16 @@ class MyApp extends StatelessWidget {
                   child: ListView(
                     // Important: Remove any padding from the ListView.
                     padding: EdgeInsets.zero,
-                    children: const [
+                    children: [
                       slide_drawer_header(),
                       slide_drawer_menu(),
-                      slide_drawer_menu(),
+                      slide_drawer_menu(
+                        title: 'Credit Card Scanner',
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CreditCardScanner())),
+                      ),
                       CollapsibleListTile(),
                     ],
                   ),
@@ -164,7 +174,8 @@ class _CustomSizedDrawerState extends State<CustomSizedDrawer>
                 GestureDetector(
                   onTap: toggleDrawer,
                   child: Container(
-                    color: Colors.black.withOpacity(0.4 * _animationController.value),
+                    color: Colors.black
+                        .withOpacity(0.4 * _animationController.value),
                   ),
                 ),
               child!,

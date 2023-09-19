@@ -1,9 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:camera/camera.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:google_ml_kit/google_ml_kit.dart';
+// import 'package:camera/camera.dart';
+// import 'package:image_picker/image_picker.dart';
+// import 'package:google_ml_kit/google_ml_kit.dart';
+import 'package:credit_card_scanner/credit_card_scanner.dart';
 
 class CreditCardScanner extends StatefulWidget {
   @override
@@ -11,88 +12,54 @@ class CreditCardScanner extends StatefulWidget {
 }
 
 class _CreditCardScannerState extends State<CreditCardScanner> {
-  CameraController? _cameraController;
-  bool _isCameraInitialized = false;
-  String _scannedCardData = '';
+  CardDetails? _cardDetails;
+  CardScanOptions scanOptions = const CardScanOptions(
+    scanCardHolderName: true,
+    // enableDebugLogs: true,
+    validCardsToScanBeforeFinishingScan: 5,
+    possibleCardHolderNamePositions: [
+      CardHolderNameScanPosition.aboveCardNumber,
+    ],
+  );
 
-  @override
-  void initState() {
-    super.initState();
-    _initializeCamera();
-  }
-
-  Future<void> _initializeCamera() async {
-    final cameras = await availableCameras();
-    final camera = cameras.first;
-
-    _cameraController = CameraController(camera, ResolutionPreset.medium);
-    await _cameraController!.initialize();
-
-    if (!mounted) return;
-
+  Future<void> scanCard() async {
+    final CardDetails? cardDetails =
+        await CardScanner.scanCard(scanOptions: scanOptions);
+    if (!mounted || cardDetails == null) return;
     setState(() {
-      _isCameraInitialized = true;
+      _cardDetails = cardDetails;
     });
-  }
-
-  Future<void> _scanCreditCard() async {
-    try {
-      final image = await ImagePicker().getImage(source: ImageSource.camera);
-
-      if (image != null) {
-        final inputImage = InputImage.fromFilePath(image.path);
-        final textDetector = GoogleMlKit.vision.textRecognizer();
-        final RecognizedText recognisedText = await textDetector.processImage(inputImage);
-        
-        String scannedText = '';
-
-        for (TextBlock block in recognisedText.blocks) {
-          scannedText += block.text + '\n';
-        }
-
-        // Process the scanned text to extract credit card information
-        // You need to implement logic to parse and extract card details
-
-        setState(() {
-          _scannedCardData = scannedText;
-        });
-
-        textDetector.close();
-      }
-    } catch (e) {
-      print('Error scanning credit card: $e');
-    }
-  }
-
-  @override
-  void dispose() {
-    _cameraController?.dispose();
-    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        _isCameraInitialized
-            ? SizedBox(
-                width: 300,
-                height: 300,
-                child: CameraPreview(_cameraController!),
-              )
-            : CircularProgressIndicator(),
-        ElevatedButton(
-          onPressed: _scanCreditCard,
-          child: Text('Scan Credit Card'),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('credit_card_scanner app'),
         ),
-        Card(
-          margin: EdgeInsets.all(16),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(_scannedCardData),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              MaterialButton(
+                color: Colors.blue,
+                onPressed: () async {
+                  scanCard();
+                },
+                child: const Text('scan card'),
+              ),
+              Text('$_cardDetails'),
+              // Expanded(
+              //   child: OptionConfigureWidget(
+              //     initialOptions: scanOptions,
+              //     onScanOptionChanged: (newOptions) => scanOptions = newOptions,
+              //   ),
+              // )
+            ],
           ),
         ),
-      ],
+      ),
     );
   }
 }

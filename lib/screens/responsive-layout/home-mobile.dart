@@ -181,9 +181,9 @@ class MyMobileBody extends StatelessWidget {
                     padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                     child: FilePickerComponent()),
 
-                Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                child: CreditCardScanner())
+                // Padding(
+                // padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                // child: CreditCardScanner())
                 ],
               ),
             ),
