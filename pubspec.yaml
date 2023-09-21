@@ -24,6 +24,7 @@ dependencies:
   camera: ^0.9.4+5
   image_picker: ^0.8.4+2
   credit_card_scanner: ^1.0.5
+  sentry_flutter: ^7.10.1
 
 dev_dependencies:
   flutter_test:

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:credit_card_scanner/credit_card_scanner.dart';
+import 'package:sentry/sentry.dart';
 
 class CreditCardScanner extends StatefulWidget {
   @override
@@ -23,12 +24,19 @@ class _CreditCardScannerState extends State<CreditCardScanner> {
   );
 
   Future<void> scanCard() async {
-    final CardDetails? cardDetails =
-        await CardScanner.scanCard(scanOptions: scanOptions);
-    if (!mounted || cardDetails == null) return;
-    setState(() {
-      _cardDetails = cardDetails;
-    });
+    try {
+      final CardDetails? cardDetails =
+          await CardScanner.scanCard(scanOptions: scanOptions);
+      if (!mounted || cardDetails == null) return;
+      setState(() {
+        _cardDetails = cardDetails;
+      });
+    } catch (exception, stackTrace) {
+      await Sentry.captureException(
+        exception,
+        stackTrace: stackTrace,
+      );
+    }
   }
 
   @override

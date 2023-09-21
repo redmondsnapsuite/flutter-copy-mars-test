@@ -9,9 +9,24 @@ import 'components/slide_drawer/slide_drawer_menu.dart';
 // import 'screens/open_jobs.dart';
 import 'layout/navBar.dart';
 import 'layout/footer.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
-void main() {
-  runApp(const MyApp());
+//OLD MAIN FUNCTION
+// void main() {
+//   runApp(const MyApp());
+// }
+
+Future<void> main() async {
+  await SentryFlutter.init(
+    (options) {
+      options.dsn = 'https://d5f7b56c6ac1072f09489e164b078f8a@o4505919507726336.ingest.sentry.io/4505919516966912';
+      // Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
+      // We recommend adjusting this value in production.
+      options.tracesSampleRate = 1.0;
+    },
+    appRunner: () => runApp(MyApp()),
+  );
+
 }
 
 class MyApp extends StatelessWidget {
